@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Typography, Button, Box, Grid } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const QuestionPage2 = () => {
   const [selectedJobs, setSelectedJobs] = useState([]);
+  const navigate = useNavigate();
 
   const jobs = [
     '전사', '마법사', '암살자',
@@ -17,7 +19,7 @@ const QuestionPage2 = () => {
 
   const handleNext = () => {
     console.log('Selected jobs:', selectedJobs);
-    // Here you would typically handle navigation or data submission
+    navigate('/question3');
   };
 
   return (
@@ -49,7 +51,13 @@ const QuestionPage2 = () => {
                 },
               }}
             >
+              <Typography
+            align="center"
+            sx={{ fontSize: '18px', fontWeight: 'bold'}} // Adjust the fontSize here
+          >
+
               {job}
+          </Typography>
             </Button>
           </Grid>
         ))}
@@ -69,7 +77,7 @@ const QuestionPage2 = () => {
         다음
       </Button>
       <Typography variant="body1" sx={{ mt: 2, opacity: 0.7 }}>
-        2/6
+        2/9
       </Typography>
     </Box>
   );

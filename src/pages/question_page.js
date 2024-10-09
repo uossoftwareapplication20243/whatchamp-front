@@ -1,64 +1,64 @@
-import React from 'react';
-import { Typography, Button, Box } from '@mui/material';
+import React, { useState } from 'react';
+import { Typography, Button, Box, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-
 const QuestionPage = () => {
+  const [selectedJobs, setSelectedJobs] = useState([]);
   const navigate = useNavigate();
 
+  const jobs = [
+    "탑", "정글", "미드", "원딜", "서폿", "상관없음"
+  ];
+
+
   const handleButtonClick = () => {
-    // Navigate to the job selection page (2/6)
     navigate('/question2');
   };
 
   return (
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        minHeight="100vh"
-        sx={{ backgroundColor: '#f5f5f5' }}
-      >
-        <Typography variant="h4" gutterBottom>
-          어디서 재미를 느끼나요?
-        </Typography>
-        <Box mb={4} mt={4}>
-          <Button
-            variant="contained"
-            onClick={handleButtonClick}
-            sx={{
-              m: 1,
-              width: '200px',
-              height: '100px',
-              backgroundColor: 'rgba(68, 77, 242, 0.5)', // 60% opacity
-              '&:hover': {
-                backgroundColor: 'rgba(68, 77, 242, 1)', // 100% opacity
-              },
-            }}
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      minHeight="100vh"
+      sx={{ backgroundColor: '#f5f5f5', p: 3 }}
+    >
+      <Typography variant="h4" mb={4} gutterBottom>
+        라인을 선택하세요
+      </Typography>
+      <Grid container spacing={2} sx={{ maxWidth: 600, mb: 4 }}>
+        {jobs.map((job, index) => (
+          <Grid item xs={4} key={index}>
+            <Button
+              variant="contained"
+              fullWidth
+              onClick={handleButtonClick}
+              sx={{
+                height: 100,
+                backgroundColor: selectedJobs.includes(job) 
+                  ? 'rgba(68, 77, 242, 1)' 
+                  : 'rgba(68, 77, 242, 0.5)',
+                '&:hover': {
+              backgroundColor: 'rgba(68, 77, 242, 1)', // 100% opacity
+            }
+              }}
+            >
+              <Typography
+            align="center"
+            sx={{ fontSize: '18px', fontWeight: 'bold'}} // Adjust the fontSize here
           >
-            게임에서 승리하기
-          </Button>
-          <Button
-            variant="contained"
-            onClick={handleButtonClick}
-            sx={{
-              m: 1,
-              width: '200px',
-              height: '100px',
-              backgroundColor: 'rgba(68, 77, 242, 0.5)', // 60% opacity
-              '&:hover': {
-                backgroundColor: 'rgba(68, 77, 242, 1)', // 100% opacity
-              },
-            }}
-          >
-            게임 안에서 놀기
-          </Button>
-        </Box>
-        <Typography variant="body1" sx={{ opacity: 0.7 }}>
-          1/6
-        </Typography>
-      </Box>
+
+              {job}
+          </Typography>
+            </Button>
+          </Grid>
+        ))}
+      </Grid>
+      <Typography variant="body1" sx={{ mt: 2, opacity: 0.7 }}>
+        1/9
+      </Typography>
+    </Box>
   );
 };
 
