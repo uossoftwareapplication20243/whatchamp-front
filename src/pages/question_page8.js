@@ -19,7 +19,7 @@ const QuestionPage8 = () => {
       minHeight="100vh"
       sx={{ backgroundColor: '#f5f5f5' }}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
         자신의 마인드는?
       </Typography>
       <Box mb={4} mt={4}>

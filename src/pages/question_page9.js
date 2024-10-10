@@ -7,7 +7,7 @@ const QuestionPage9 = () => {
 
   const handleButtonClick = () => {
     // Navigate to the next question page
-    // navigate('/question');
+    navigate('/result');
   };
 
   return (
@@ -19,7 +19,7 @@ const QuestionPage9 = () => {
       minHeight="100vh"
       sx={{ backgroundColor: '#f5f5f5' }}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
         나의 조별과제 스타일은?
       </Typography>
       

@@ -19,7 +19,7 @@ const QuestionPage7 = () => {
       minHeight="100vh"
       sx={{ backgroundColor: '#f5f5f5' }}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
         심리싸움 좋아하십니까
       </Typography>
       <Box mb={4} mt={4}>

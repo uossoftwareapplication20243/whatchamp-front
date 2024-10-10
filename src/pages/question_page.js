@@ -24,7 +24,7 @@ const QuestionPage = () => {
       minHeight="100vh"
       sx={{ backgroundColor: '#f5f5f5', p: 3 }}
     >
-      <Typography variant="h4" mb={4} gutterBottom>
+      <Typography variant="h4" mb={4} gutterBottom sx={{ fontWeight: 'bold' }}> 
         라인을 선택하세요
       </Typography>
       <Grid container spacing={2} sx={{ maxWidth: 600, mb: 4 }}>

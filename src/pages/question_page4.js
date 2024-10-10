@@ -19,7 +19,7 @@ const QuestionPage4 = () => {
       minHeight="100vh"
       sx={{ backgroundColor: '#f5f5f5' }}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
         어떤 챔피언을 하고 싶나요?
       </Typography>
       <Box mb={4} mt={4}>
@@ -41,7 +41,7 @@ const QuestionPage4 = () => {
             sx={{ fontSize: '18px' , fontWeight: 'bold'}} // Adjust the fontSize here
           >
 
-          공격적인
+          공격적인 <br />챔피언
           </Typography>
         </Button>
         <Button
@@ -62,7 +62,7 @@ const QuestionPage4 = () => {
             sx={{ fontSize: '18px' , fontWeight: 'bold'}} // Adjust the fontSize here
           >
 
-          수비적인
+          수비적인 <br />챔피언
           </Typography>
         </Button>
       </Box>

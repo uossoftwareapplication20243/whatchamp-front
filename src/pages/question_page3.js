@@ -18,7 +18,7 @@ const QuestionPage3 = () => {
       minHeight="100vh"
       sx={{ backgroundColor: '#f5f5f5' }}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
         어떤 챔피언을 하고 싶나요?
       </Typography>
       <Box mb={4} mt={4}>

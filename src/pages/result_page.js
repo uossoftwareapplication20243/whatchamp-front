@@ -16,7 +16,7 @@ function ResultPage() {
     
   return (
     <Box sx={{ maxWidth: 1400, margin: 'auto', textAlign: 'center', mt: 10 }}>
-      <Typography variant="h4" component="h1" gutterBottom>
+      <Typography variant="h4" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
         왓챔?
       </Typography>
       <Typography variant="subtitle1" gutterBottom>
@@ -31,7 +31,7 @@ function ResultPage() {
           mt: 3
         }}
       >
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
           {positions[0].en}
         </Typography>
         <Grid container spacing={5} justifyContent="center">
@@ -50,7 +50,7 @@ function ResultPage() {
                 src={get_images(championsName[champion].en)}
                 alt={champion}
               />
-              <Typography variant="h5">{championsName[champion].ko}</Typography>
+              <Typography variant="h5" sx={{ fontWeight: 'bold' }}>{championsName[champion].ko}</Typography>
             </Grid>
           ))}
         </Grid>

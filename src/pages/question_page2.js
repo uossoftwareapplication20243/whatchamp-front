@@ -31,7 +31,7 @@ const QuestionPage2 = () => {
       minHeight="100vh"
       sx={{ backgroundColor: '#f5f5f5', p: 3 }}
     >
-      <Typography variant="h4" mb={4} gutterBottom>
+      <Typography variant="h4" mb={4} gutterBottom sx={{ fontWeight: 'bold' }}>
         좋아하는 직업군은?
       </Typography>
       <Grid container spacing={2} sx={{ maxWidth: 600, mb: 4 }}>
