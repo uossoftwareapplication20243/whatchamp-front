@@ -64,7 +64,7 @@ const QuestionPage3 = () => {
         </Button>
       </Box>
       <Typography variant="body1" sx={{ opacity: 0.7 }}>
-        3/9
+        2/8
       </Typography>
     </Box>
   );

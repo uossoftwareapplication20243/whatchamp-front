@@ -100,7 +100,7 @@ const QuestionPage9 = () => {
       </Grid>
       
       <Typography variant="body1" sx={{ opacity: 0.7 }}>
-        9/9
+        8/8
       </Typography>
     </Box>
   );

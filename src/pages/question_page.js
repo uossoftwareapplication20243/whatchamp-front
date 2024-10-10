@@ -55,9 +55,6 @@ const QuestionPage = () => {
           </Grid>
         ))}
       </Grid>
-      <Typography variant="body1" sx={{ mt: 2, opacity: 0.7 }}>
-        1/9
-      </Typography>
     </Box>
   );
 };
