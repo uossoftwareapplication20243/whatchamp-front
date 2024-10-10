@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { theme } from '../App';
 import { championsName } from '../const/championsName';
 import {positions} from '../const/positions';
+import { Link } from 'react-router-dom';
 
 
 function get_images(champion_en){
@@ -16,9 +17,11 @@ function ResultPage() {
     
   return (
     <Box sx={{ maxWidth: 1400, margin: 'auto', textAlign: 'center', mt: 10 }}>
+      <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
       <Typography variant="h4" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
         왓챔?
       </Typography>
+      </Link>
       <Typography variant="subtitle1" gutterBottom>
         {username} {tag}
       </Typography>
