@@ -1,34 +1,24 @@
-import React, { useState } from 'react';
-import { Typography, Button, Box, Grid } from '@mui/material';
+import React from 'react';
+import { Typography, Button, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext';
 
 const QuestionPage2 = () => {
-  const [selectedJobs, setSelectedJobs] = useState([]);
   const navigate = useNavigate();
-  const {questionMap, setQuestionMap} = useQuestionContext()
+  const { questionMap, setQuestionMap } = useQuestionContext();
 
-  console.log(questionMap)
-
-
-  const jobs = [
-    '전사', '마법사', '암살자',
-    '원거리 딜러', '탱커', '서포터'
+  const intro = "어떤 챔피언을 하고 싶나요?"
+  const options = [
+    "즐길 수 있는\n챔피언",
+    "이길 수 있는\n챔피언"
   ];
 
-  const handleJobToggle = (job) => {
-    setSelectedJobs(prev => 
-      prev.includes(job) ? prev.filter(j => j !== job) : [...prev, job]
-    );
-  };
-
-  const handleNext = () => {
-    console.log('Selected jobs:', selectedJobs);
-
+  const handleButtonClick = (option) => {
     setQuestionMap({
       ...questionMap,
-      q2: selectedJobs,
-    })
+      q2: option,
+    });
+    console.log(questionMap);
     navigate('/question3');
   };
 
@@ -39,55 +29,38 @@ const QuestionPage2 = () => {
       alignItems="center"
       justifyContent="center"
       minHeight="100vh"
-      sx={{ backgroundColor: '#f5f5f5', p: 3 }}
+      sx={{ backgroundColor: '#f5f5f5' }}
     >
-      <Typography variant="h4" mb={4} gutterBottom sx={{ fontWeight: 'bold' }}>
-        좋아하는 직업군은?
+      <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
+        어떤 챔피언을 하고 싶나요?
       </Typography>
-      <Grid container spacing={2} sx={{ maxWidth: 600, mb: 4 }}>
-        {jobs.map((job, index) => (
-          <Grid item xs={4} key={index}>
-            <Button
-              variant="contained"
-              fullWidth
-              onClick={() => handleJobToggle(job)}
-              sx={{
-                height: 100,
-                backgroundColor: selectedJobs.includes(job) 
-                  ? 'rgba(68, 77, 242, 1)' 
-                  : 'rgba(68, 77, 242, 0.5)',
-                '&:hover': {
-                  backgroundColor: 'rgba(68, 77, 242, 1)',
-                },
-              }}
-            >
-              <Typography
-            align="center"
-            sx={{ fontSize: '18px', fontWeight: 'bold'}} // Adjust the fontSize here
+      <Box mb={4} mt={4}>
+        {options.map((option, index) => (
+          <Button
+            key={index}
+            variant="contained"
+            onClick={() => handleButtonClick(option)}
+            sx={{
+              m: 1,
+              width: '200px',
+              height: '100px',
+              backgroundColor: 'rgba(68, 77, 242, 0.5)', // 60% opacity
+              '&:hover': {
+                backgroundColor: 'rgba(68, 77, 242, 1)', // 100% opacity
+              },
+            }}
           >
-
-              {job}
-          </Typography>
-            </Button>
-          </Grid>
+            <Typography
+              align="center"
+              sx={{ fontSize: '18px', fontWeight: 'bold', whiteSpace: 'pre-line' }}
+            >
+              {option}
+            </Typography>
+          </Button>
         ))}
-      </Grid>
-      <Button
-        variant="contained"
-        onClick={handleNext}
-        sx={{
-          width: 200,
-          height: 50,
-          backgroundColor: 'rgba(68, 77, 242, 1)',
-          '&:hover': {
-            backgroundColor: 'rgba(68, 77, 242, 0.8)',
-          },
-        }}
-      >
-        다음
-      </Button>
-      <Typography variant="body1" sx={{ mt: 2, opacity: 0.7 }}>
-        1/8
+      </Box>
+      <Typography variant="body1" sx={{ opacity: 0.7 }}>
+        2/8
       </Typography>
     </Box>
   );

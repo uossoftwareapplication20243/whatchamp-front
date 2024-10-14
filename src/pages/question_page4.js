@@ -3,14 +3,16 @@ import { Typography, Button, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext';
 
+
+
 const QuestionPage4 = () => {
   const navigate = useNavigate();
   const { questionMap, setQuestionMap } = useQuestionContext();
 
   const intro = "어떤 챔피언을 하고 싶나요?"
   const options = [
-    "공격적인\n챔피언",
-    "수비적인\n챔피언"
+    "조작이 쉬운\n챔피언",
+    "어렵지만 화려한\n챔피언"
   ];
 
   const handleButtonClick = (option) => {
@@ -60,7 +62,7 @@ const QuestionPage4 = () => {
         ))}
       </Box>
       <Typography variant="body1" sx={{ opacity: 0.7 }}>
-        3/8
+        4/8
       </Typography>
     </Box>
   );

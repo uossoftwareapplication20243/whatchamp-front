@@ -7,10 +7,10 @@ const QuestionPage6 = () => {
   const navigate = useNavigate();
   const { questionMap, setQuestionMap } = useQuestionContext();
 
-  const intro = "어떤 챔피언을 하고 싶나요?"
+  const intro = "심리싸움 좋아하십니까"
   const options = [
-    "많이 쓰는\n챔피언",
-    "유니크한\n챔피언"
+    "네! 심리싸움 이기면\n너무 재밌죠",
+    "아뇨. 저한테만\n집중하고 싶어요"
   ];
 
   const handleButtonClick = (option) => {
@@ -60,7 +60,7 @@ const QuestionPage6 = () => {
         ))}
       </Box>
       <Typography variant="body1" sx={{ opacity: 0.7 }}>
-        5/8
+        6/8
       </Typography>
     </Box>
   );

@@ -11,7 +11,7 @@ function MainPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/question', { state: { username, tag } });
+    navigate('/question0', { state: { username, tag } });
   };
 
   return (

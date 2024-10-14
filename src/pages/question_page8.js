@@ -1,26 +1,38 @@
 import React from 'react';
-import { Typography, Button, Box } from '@mui/material';
+import { Typography, Button, Box, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext';
-
 
 const QuestionPage8 = () => {
   const navigate = useNavigate();
   const { questionMap, setQuestionMap } = useQuestionContext();
 
-  const intro = "자신의 마인드는?"
+  console.log(questionMap);
+
   const options = [
-    "일단 내가 잘해야 한다",
-    "내가 지더라도\n팀이 이기면 괜찮다"
+    "무조건 리더",
+    "답답하면 리더",
+    "그냥.. 열심히 해요",
+    "버스타고 싶은데요? ㅎㅎ"
   ];
 
-  const handleButtonClick = (option) => {
+  const handleButtonClick = async (option) => {
+    // const response = await fetch(
+    //   'url', {
+    //     method: "POST",
+    //     body: JSON.stringify(questionMap)
+    //   }
+    // );
+    // const data = await response.json();
+
+    // console.log(data);
+
     setQuestionMap({
       ...questionMap,
       q8: option,
     });
-    console.log(questionMap);
-    navigate('/question9');
+
+    navigate('/result');
   };
 
   return (
@@ -30,38 +42,38 @@ const QuestionPage8 = () => {
       alignItems="center"
       justifyContent="center"
       minHeight="100vh"
-      sx={{ backgroundColor: '#f5f5f5' }}
+      sx={{ backgroundColor: '#f5f5f5', p: 3 }}
     >
-      <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
-        {intro}
+      <Typography variant="h4" mb={4} gutterBottom sx={{ fontWeight: 'bold' }}>
+        나의 조별과제 스타일은?
       </Typography>
-      <Box mb={4} mt={4}>
+      <Grid container spacing={2} sx={{ maxWidth: 600, mb: 4 }}>
         {options.map((option, index) => (
-          <Button
-            key={index}
-            variant="contained"
-            onClick={() => handleButtonClick(option)}
-            sx={{
-              m: 1,
-              width: '200px',
-              height: '100px',
-              backgroundColor: 'rgba(68, 77, 242, 0.5)', // 60% opacity
-              '&:hover': {
-                backgroundColor: 'rgba(68, 77, 242, 1)', // 100% opacity
-              },
-            }}
-          >
-            <Typography
-              align="center"
-              sx={{ fontSize: '18px', fontWeight: 'bold', whiteSpace: 'pre-line' }}
+          <Grid item xs={6} key={index}>
+            <Button
+              variant="contained"
+              fullWidth
+              onClick={() => handleButtonClick(option)}
+              sx={{
+                height: 100,
+                backgroundColor: 'rgba(68, 77, 242, 0.5)',
+                '&:hover': {
+                  backgroundColor: 'rgba(68, 77, 242, 1)',
+                }
+              }}
             >
-              {option}
-            </Typography>
-          </Button>
+              <Typography
+                align="center"
+                sx={{ fontSize: '18px', fontWeight: 'bold' }}
+              >
+                {option}
+              </Typography>
+            </Button>
+          </Grid>
         ))}
-      </Box>
+      </Grid>
       <Typography variant="body1" sx={{ opacity: 0.7 }}>
-        7/8
+        8/8
       </Typography>
     </Box>
   );

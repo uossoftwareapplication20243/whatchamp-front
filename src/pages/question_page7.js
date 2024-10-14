@@ -3,14 +3,15 @@ import { Typography, Button, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext';
 
+
 const QuestionPage7 = () => {
   const navigate = useNavigate();
   const { questionMap, setQuestionMap } = useQuestionContext();
 
-  const intro = "심리싸움 좋아하십니까"
+  const intro = "자신의 마인드는?"
   const options = [
-    "네! 심리싸움 이기면\n너무 재밌죠",
-    "아뇨. 저한테만\n집중하고 싶어요"
+    "일단 내가 잘해야 한다",
+    "내가 지더라도\n팀이 이기면 괜찮다"
   ];
 
   const handleButtonClick = (option) => {
@@ -60,7 +61,7 @@ const QuestionPage7 = () => {
         ))}
       </Box>
       <Typography variant="body1" sx={{ opacity: 0.7 }}>
-        6/8
+        7/8
       </Typography>
     </Box>
   );

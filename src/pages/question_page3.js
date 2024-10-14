@@ -9,8 +9,8 @@ const QuestionPage3 = () => {
 
   const intro = "어떤 챔피언을 하고 싶나요?"
   const options = [
-    "즐길 수 있는\n챔피언",
-    "이길 수 있는\n챔피언"
+    "공격적인\n챔피언",
+    "수비적인\n챔피언"
   ];
 
   const handleButtonClick = (option) => {
@@ -32,7 +32,7 @@ const QuestionPage3 = () => {
       sx={{ backgroundColor: '#f5f5f5' }}
     >
       <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
-        어떤 챔피언을 하고 싶나요?
+        {intro}
       </Typography>
       <Box mb={4} mt={4}>
         {options.map((option, index) => (
@@ -60,7 +60,7 @@ const QuestionPage3 = () => {
         ))}
       </Box>
       <Typography variant="body1" sx={{ opacity: 0.7 }}>
-        2/8
+        3/8
       </Typography>
     </Box>
   );

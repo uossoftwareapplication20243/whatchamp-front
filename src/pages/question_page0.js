@@ -3,7 +3,7 @@ import { Typography, Button, Box, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext.js';
 
-const QuestionPage = () => {
+const QuestionPage0 = () => {
   const navigate = useNavigate();
   const {questionMap, setQuestionMap} = useQuestionContext()
 
@@ -15,12 +15,7 @@ const QuestionPage = () => {
 
 
   const handleButtonClick = (job) => {
-    setQuestionMap({
-      ...questionMap,
-      q1: job,
-    })
-
-    navigate('/question2');
+    navigate('/question1');
   };
 
   return (
@@ -65,4 +60,4 @@ const QuestionPage = () => {
   );
 };
 
-export default QuestionPage;
+export default QuestionPage0;
