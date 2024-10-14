@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Typography, TextField, Button } from '@mui/material';
+import QuestionProvider from '../context/questionContext';
 
 function MainPage() {
   const [username, setUsername] = useState('');
@@ -14,6 +15,7 @@ function MainPage() {
   };
 
   return (
+    <QuestionProvider>
     <Box sx={{ maxWidth: 600, margin: 'auto', textAlign: 'center', mt: 4 }}>
       <Typography variant="h4" component="h1" gutterBottom>
         왓챔?
@@ -44,6 +46,7 @@ function MainPage() {
         </Box>
       </form>
     </Box>
+    </QuestionProvider>
   );
 };
 export default MainPage;

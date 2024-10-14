@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
 import { Typography, Button, Box, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { useQuestionContext } from '../context/questionContext.js';
 
 const QuestionPage = () => {
-  const [selectedJobs, setSelectedJobs] = useState([]);
   const navigate = useNavigate();
+  const {questionMap, setQuestionMap} = useQuestionContext()
 
-  const jobs = [
+  console.log(questionMap)
+
+  const lines = [
     "탑", "정글", "미드", "원딜", "서폿", "상관없음"
   ];
 
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (job) => {
+    setQuestionMap({
+      ...questionMap,
+      q1: job,
+    })
+
     navigate('/question2');
   };
 
@@ -28,17 +36,15 @@ const QuestionPage = () => {
         라인을 선택하세요
       </Typography>
       <Grid container spacing={2} sx={{ maxWidth: 600, mb: 4 }}>
-        {jobs.map((job, index) => (
+        {lines.map((job, index) => (
           <Grid item xs={4} key={index}>
             <Button
               variant="contained"
               fullWidth
-              onClick={handleButtonClick}
+              onClick={() => handleButtonClick(job)}
               sx={{
                 height: 100,
-                backgroundColor: selectedJobs.includes(job) 
-                  ? 'rgba(68, 77, 242, 1)' 
-                  : 'rgba(68, 77, 242, 0.5)',
+                backgroundColor: 'rgba(68, 77, 242, 0.5)',
                 '&:hover': {
               backgroundColor: 'rgba(68, 77, 242, 1)', // 100% opacity
             }

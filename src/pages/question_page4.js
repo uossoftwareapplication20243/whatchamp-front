@@ -1,12 +1,24 @@
 import React from 'react';
 import { Typography, Button, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { useQuestionContext } from '../context/questionContext';
 
 const QuestionPage4 = () => {
   const navigate = useNavigate();
+  const { questionMap, setQuestionMap } = useQuestionContext();
 
-  const handleButtonClick = () => {
-    // Navigate to the next question page
+  const intro = "어떤 챔피언을 하고 싶나요?"
+  const options = [
+    "공격적인\n챔피언",
+    "수비적인\n챔피언"
+  ];
+
+  const handleButtonClick = (option) => {
+    setQuestionMap({
+      ...questionMap,
+      q4: option,
+    });
+    console.log(questionMap);
     navigate('/question5');
   };
 
@@ -20,51 +32,32 @@ const QuestionPage4 = () => {
       sx={{ backgroundColor: '#f5f5f5' }}
     >
       <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
-        어떤 챔피언을 하고 싶나요?
+        {intro}
       </Typography>
       <Box mb={4} mt={4}>
-        <Button
-          variant="contained"
-          onClick={handleButtonClick}
-          sx={{
-            m: 1,
-            width: '200px',
-            height: '100px',
-            backgroundColor: 'rgba(68, 77, 242, 0.5)', // 60% opacity
-            '&:hover': {
-              backgroundColor: 'rgba(68, 77, 242, 1)', // 100% opacity
-            },
-          }}
-        >
-            <Typography
-            align="center"
-            sx={{ fontSize: '18px' , fontWeight: 'bold'}} // Adjust the fontSize here
+        {options.map((option, index) => (
+          <Button
+            key={index}
+            variant="contained"
+            onClick={() => handleButtonClick(option)}
+            sx={{
+              m: 1,
+              width: '200px',
+              height: '100px',
+              backgroundColor: 'rgba(68, 77, 242, 0.5)', // 60% opacity
+              '&:hover': {
+                backgroundColor: 'rgba(68, 77, 242, 1)', // 100% opacity
+              },
+            }}
           >
-
-          공격적인 <br />챔피언
-          </Typography>
-        </Button>
-        <Button
-          variant="contained"
-          onClick={handleButtonClick}
-          sx={{
-            m: 1,
-            width: '200px',
-            height: '100px',
-            backgroundColor: 'rgba(68, 77, 242, 0.5)', // 60% opacity
-            '&:hover': {
-              backgroundColor: 'rgba(68, 77, 242, 1)', // 100% opacity
-            },
-          }}
-        >
             <Typography
-            align="center"
-            sx={{ fontSize: '18px' , fontWeight: 'bold'}} // Adjust the fontSize here
-          >
-
-          수비적인 <br />챔피언
-          </Typography>
-        </Button>
+              align="center"
+              sx={{ fontSize: '18px', fontWeight: 'bold', whiteSpace: 'pre-line' }}
+            >
+              {option}
+            </Typography>
+          </Button>
+        ))}
       </Box>
       <Typography variant="body1" sx={{ opacity: 0.7 }}>
         3/8

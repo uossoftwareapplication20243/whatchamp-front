@@ -15,6 +15,7 @@ import QuestionPage9 from './pages/question_page9';
 
 
 import { createTheme, ThemeProvider } from '@mui/material';
+import QuestionProvider  from './context/questionContext';
 
 export const theme = createTheme({
   typography: {
@@ -31,22 +32,24 @@ export const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/result" element={<ResultPage />} />
-          <Route path="/question" element={<QuestionPage />} />
-          <Route path="/question2" element={<QuestionPage2 />} />
-          <Route path="/question3" element={<QuestionPage3 />} />
-          <Route path="/question4" element={<QuestionPage4 />} />
-          <Route path="/question5" element={<QuestionPage5 />} />
-          <Route path="/question6" element={<QuestionPage6 />} />
-          <Route path="/question7" element={<QuestionPage7 />} />
-          <Route path="/question8" element={<QuestionPage8 />} />
-          <Route path="/question9" element={<QuestionPage9 />} />          
+      <QuestionProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/result" element={<ResultPage />} />
+            <Route path="/question" element={<QuestionPage />} />
+            <Route path="/question2" element={<QuestionPage2 />} />
+            <Route path="/question3" element={<QuestionPage3 />} />
+            <Route path="/question4" element={<QuestionPage4 />} />
+            <Route path="/question5" element={<QuestionPage5 />} />
+            <Route path="/question6" element={<QuestionPage6 />} />
+            <Route path="/question7" element={<QuestionPage7 />} />
+            <Route path="/question8" element={<QuestionPage8 />} />
+            <Route path="/question9" element={<QuestionPage9 />} />          
 
-        </Routes>
-      </Router>
+          </Routes>
+        </Router>
+      </QuestionProvider>
     </ThemeProvider>
   );
 };

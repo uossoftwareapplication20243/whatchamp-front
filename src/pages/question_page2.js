@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { Typography, Button, Box, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { useQuestionContext } from '../context/questionContext';
 
 const QuestionPage2 = () => {
   const [selectedJobs, setSelectedJobs] = useState([]);
   const navigate = useNavigate();
+  const {questionMap, setQuestionMap} = useQuestionContext()
+
+  console.log(questionMap)
+
 
   const jobs = [
     '전사', '마법사', '암살자',
@@ -19,6 +24,11 @@ const QuestionPage2 = () => {
 
   const handleNext = () => {
     console.log('Selected jobs:', selectedJobs);
+
+    setQuestionMap({
+      ...questionMap,
+      q2: selectedJobs,
+    })
     navigate('/question3');
   };
 
