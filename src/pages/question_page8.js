@@ -7,8 +7,6 @@ const QuestionPage8 = () => {
   const navigate = useNavigate();
   const { questionMap, setQuestionMap } = useQuestionContext();
 
-  console.log(questionMap);
-
   const options = [
     "무조건 리더",
     "답답하면 리더",
@@ -32,6 +30,7 @@ const QuestionPage8 = () => {
       q8: option,
     });
 
+    console.log(questionMap);
     navigate('/result');
   };
 
