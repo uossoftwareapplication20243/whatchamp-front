@@ -19,4 +19,8 @@ export const positions = {
         en: 'SUPPORTER',
         ko: '서폿'
     },
+    5: {
+        en: 'ALL',
+        ko: '상관없음'
+    }
 }

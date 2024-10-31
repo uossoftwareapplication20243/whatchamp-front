@@ -5,6 +5,7 @@ import { theme } from '../App';
 import { championsName } from '../const/championsName';
 import {positions} from '../const/positions';
 import { Link } from 'react-router-dom';
+import { useQuestionContext } from '../context/questionContext';
 
 
 function get_images(champion_en){
@@ -14,6 +15,8 @@ function get_images(champion_en){
 function ResultPage() {
   const location = useLocation();
   const { username, tag } = location.state || {};
+  const { questionMap, line } = useQuestionContext();
+  const idx = line;
     
   return (
     <Box sx={{ maxWidth: 1400, margin: 'auto', textAlign: 'center', mt: 10 }}>
@@ -35,7 +38,7 @@ function ResultPage() {
         }}
       >
         <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
-          {positions[0].en}
+          {positions[idx].en}
         </Typography>
         <Grid container spacing={5} justifyContent="center">
           {[102, 82].map((champion, index) => (
@@ -53,7 +56,7 @@ function ResultPage() {
                 src={get_images(championsName[champion].en)}
                 alt={champion}
               />
-              <Typography variant="h5" sx={{ fontWeight: 'bold' }}>{championsName[champion].ko}</Typography>
+              <Typography variant="h5">{championsName[champion].ko}</Typography>
             </Grid>
           ))}
         </Grid>

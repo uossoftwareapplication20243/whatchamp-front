@@ -6,9 +6,10 @@ import { useQuestionContext } from '../context/questionContext';
 const QuestionPage1 = () => {
   const [selectedJobs, setSelectedJobs] = useState([]);
   const navigate = useNavigate();
-  const {questionMap, setQuestionMap} = useQuestionContext()
+  const {questionMap, setQuestionMap, line} = useQuestionContext()
 
   console.log(questionMap)
+  console.log(line)
 
 
   const jobs = [

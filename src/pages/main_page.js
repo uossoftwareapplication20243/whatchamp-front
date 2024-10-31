@@ -9,18 +9,19 @@ function MainPage() {
   const [tag, setTag] = useState('#KR1');
   const [showLineSelection, setShowLineSelection] = useState(false);
   const navigate = useNavigate();
-  const { questionMap, setQuestionMap } = useQuestionContext();
+  const { questionMap, setQuestionMap, setLine } = useQuestionContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowLineSelection(true);
   };
 
+
   const lines = [
     "탑", "정글", "미드", "원딜", "서폿", "상관없음"
   ];
 
-  const handleLineSelection = (line) => {
+  const handleLineSelection = (line_index) => {
 
     // const response = await fetch(
     //   'url', {
@@ -31,6 +32,8 @@ function MainPage() {
     // const data = await response.json();
 
     // console.log(data);
+
+    setLine(line_index);
     navigate('/question1');
   };
 
@@ -84,7 +87,7 @@ function MainPage() {
                   <Button
                     variant="contained"
                     fullWidth
-                    onClick={() => handleLineSelection(line)}
+                    onClick={() => handleLineSelection(index)}
                     sx={{
                       height: 100,
                       backgroundColor: 'rgba(68, 77, 242, 0.5)',
