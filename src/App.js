@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './pages/main_page';
 import ResultPage from './pages/result_page';
+import NewResultPage from './pages/new_result_page';
 import QuestionPage1 from './pages/question_page1';
 import QuestionPage2 from './pages/question_page2';
 import QuestionPage3 from './pages/question_page3';
@@ -36,6 +37,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/result" element={<ResultPage />} />
+            <Route path="/new_result" element={<NewResultPage />} />
             <Route path="/question1" element={<QuestionPage1 />} />
             <Route path="/question2" element={<QuestionPage2 />} />
             <Route path="/question3" element={<QuestionPage3 />} />

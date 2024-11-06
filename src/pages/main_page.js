@@ -5,11 +5,9 @@ import QuestionProvider from '../context/questionContext';
 import { useQuestionContext } from '../context/questionContext.js';
 
 function MainPage() {
-  const [username, setUsername] = useState('');
-  const [tag, setTag] = useState('#KR1');
   const [showLineSelection, setShowLineSelection] = useState(false);
   const navigate = useNavigate();
-  const { questionMap, setQuestionMap, setLine } = useQuestionContext();
+  const { setLine, username, tag, setUsername, setTag } = useQuestionContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,19 +19,32 @@ function MainPage() {
     "탑", "정글", "미드", "원딜", "서폿", "상관없음"
   ];
 
-  const handleLineSelection = (line_index) => {
+  const handleLineSelection = async (line_index) => {
+    setLine(line_index);
 
     // const response = await fetch(
-    //   'url', {
+    //   "http://3.35.3.104:3000/api/starter", 
+    //   {
     //     method: "POST",
-    //     body: JSON.stringify({username: username, tag: tag, line: line})
+    //     body: JSON.stringify({username: username, tag: tag})
     //   }
     // );
     // const data = await response.json();
 
     // console.log(data);
 
-    setLine(line_index);
+    // if (response.status === 200) {
+    //   const data = await response.json();
+    
+    //   if (data["record-based"]) {
+    //     navigate('/result_page');
+    //   } else {
+    //     // Navigate to the page for a negative result
+    //     navigate('/question1');
+    //   }
+    // } else {
+    //   console.error("Request failed with status:", response.status);
+    // }
     navigate('/question1');
   };
 

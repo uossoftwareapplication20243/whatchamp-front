@@ -3,62 +3,66 @@ import { Box, Typography, Paper, Grid } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 import { theme } from '../App';
 import { cNameMap } from '../const/championsName';
-import { positions } from '../const/positions';
+import {positions} from '../const/positions';
 import { Link } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext';
 
-function get_images(champion_en) {
-  return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion_en}_0.jpg`;
+
+function get_images(champion_en){
+  return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion_en}_0.jpg`
 }
 
-function ResultPage() {
+function NewResultPage() {
   const location = useLocation();
-  const { questionMap, line, username, tag } = useQuestionContext();
-  const idx = line;
+  const {line, username, tag } = useQuestionContext();
   const [championList, setChampionList] = useState([]);
-
-  // Use useEffect to fetch data
+  const idx = line;
   useEffect(() => {
-    async function fetchChampionData() {
-      try {
-        const response = await fetch(
-          `http://3.35.3.104:3000/api/result/${username}${tag}?line=${line}`,
-          { method: 'GET' }
-        );
+    // Initial static data for demonstration
+    setChampionList(['카직스', '크산테', '코그모']);
+  }, []);
 
-        if (response.status === 200) {
-          const data = await response.json();
-          setChampionList(data.champions); 
-        } else {
-          console.error('Request failed with status:', response.status);
-        }
-      } catch (error) {
-        console.error('Error fetching champions:', error);
-      }
-    }
+  // useEffect(() => {
+  //   async function fetchChampionData() {
+  //     try {
+  //       const response = await fetch(
+  //         `http://3.35.3.104:3000/api/new/result/${username}${tag}`,
+  //         { method: 'POST', body: JSON.stringify(questionMap) }
+  //       );
 
-    if (username && tag) {
-      fetchChampionData();
-    }
-  }, [username, tag, line]);
+  //       if (response.status === 200) {
+  //         const data = await response.json();
+  //         setChampionList(data.champions); 
+  //       } else {
+  //         console.error('Request failed with status:', response.status);
+  //       }
+  //     } catch (error) {
+  //       console.error('Error fetching champions:', error);
+  //     }
+  //   }
 
+  //   if (username && tag) {
+  //     fetchChampionData();
+  //   }
+  // }, [username, tag, line]);
+    
   return (
     <Box sx={{ maxWidth: 1400, margin: 'auto', textAlign: 'center', mt: 10 }}>
       <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-        <Typography variant="h4" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
-          왓챔?
-        </Typography>
+      <Typography variant="h4" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
+        왓챔?
+      </Typography>
       </Link>
       <Typography variant="subtitle1" gutterBottom>
         {username} {tag}
       </Typography>
-      <Paper
-        elevation={3}
-        sx={{
-          backgroundColor: theme.palette.primary.main,
+      <Paper 
+        elevation={3} 
+        sx={{ 
+          backgroundColor: theme.palette.primary.main, 
           color: 'white',
           p: 3,
-          mt: 3,
+          mt: 3
         }}
       >
         <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
@@ -69,13 +73,13 @@ function ResultPage() {
             <Grid item key={index}>
               <Box
                 component="img"
-                mt={3}
+                mt = {3}
                 sx={{
                   width: 600,
                   height: 350,
                   backgroundColor: index === 2 ? '#6b1b54' : '#1e3a5f',
                   borderRadius: 2,
-                  mb: 1,
+                  mb: 1
                 }}
                 src={get_images(cNameMap[champion].en)}
                 alt={champion}
@@ -87,6 +91,6 @@ function ResultPage() {
       </Paper>
     </Box>
   );
-}
+};
 
-export default ResultPage;
+export default NewResultPage;

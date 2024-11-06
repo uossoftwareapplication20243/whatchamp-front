@@ -5,7 +5,7 @@ import { useQuestionContext } from '../context/questionContext';
 
 const QuestionPage8 = () => {
   const navigate = useNavigate();
-  const { questionMap, setQuestionMap } = useQuestionContext();
+  const { questionMap, setQuestionMap, username, tag } = useQuestionContext();
 
   const options = [
     "무조건 리더",
@@ -15,15 +15,6 @@ const QuestionPage8 = () => {
   ];
 
   const handleButtonClick = async (option) => {
-    // const response = await fetch(
-    //   'url', {
-    //     method: "POST",
-    //     body: JSON.stringify(questionMap)
-    //   }
-    // );
-    // const data = await response.json();
-
-    // console.log(data);
 
     setQuestionMap({
       ...questionMap,
@@ -31,7 +22,17 @@ const QuestionPage8 = () => {
     });
 
     console.log(questionMap);
-    navigate('/result');
+
+    // const response = await fetch(
+    //   `http://3.35.3.104:3000/api/answers/${username}${tag}`, {
+    //     method: "POST",
+    //     body: JSON.stringify(questionMap)
+    //   }
+    // );
+    // const data = await response.json();
+
+
+    navigate('/new_result');
   };
 
   return (
