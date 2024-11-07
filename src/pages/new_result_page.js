@@ -22,29 +22,29 @@ function NewResultPage() {
     setChampionList(['카직스', '크산테', '코그모']);
   }, []);
 
-  // useEffect(() => {
-  //   async function fetchChampionData() {
-  //     try {
-  //       const response = await fetch(
-  //         `http://3.35.3.104:3000/api/new/result/${username}${tag}`,
-  //         { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(questionMap) }
-  //       );
+  useEffect(() => {
+    async function fetchChampionData() {
+      try {
+        const response = await fetch(
+          `http://3.35.3.104:3000/api/new/result/${username}${tag}`,
+          { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(questionMap) }
+        );
 
-  //       if (response.status === 200) {
-  //         const data = await response.json();
-  //         setChampionList(data.champions); 
-  //       } else {
-  //         console.error('Request failed with status:', response.status);
-  //       }
-  //     } catch (error) {
-  //       console.error('Error fetching champions:', error);
-  //     }
-  //   }
+        if (response.status === 200) {
+          const data = await response.json();
+          setChampionList(data.champions); 
+        } else {
+          console.error('Request failed with status:', response.status);
+        }
+      } catch (error) {
+        console.error('Error fetching champions:', error);
+      }
+    }
 
-  //   if (username && tag) {
-  //     fetchChampionData();
-  //   }
-  // }, [username, tag, line]);
+    if (username && tag) {
+      fetchChampionData();
+    }
+  }, [username, tag, line]);
     
   return (
     <Box sx={{ maxWidth: 1400, margin: 'auto', textAlign: 'center', mt: 10 }}>

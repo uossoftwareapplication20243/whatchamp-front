@@ -28,18 +28,18 @@ const QuestionPage8 = () => {
       const sendQuestionMap = async () => {
         try {
           console.log(questionMap);
-          // const response = await fetch(
-          //   `http://3.35.3.104:3000/api/answers/${username}${tag}`, {
-          //     method: "POST",
-          //     headers: { 'Content-Type': 'application/json' },
-          //     body: JSON.stringify(questionMap)
-          //   }
-          // );
-          // const data = await response.json();
-          // console.log(data);
-          // navigate('/new_result');
+          const response = await fetch(
+            `http://3.35.3.104:3000/api/answers/${username}${tag}`, {
+              method: "POST",
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(questionMap)
+            }
+          );
+          const data = await response.json();
+          console.log(data);
+          navigate('/new_result');
         } catch (error) {
-          // console.error('Error sending data:', error);
+          console.error('Error sending data:', error);
         }
       };
 

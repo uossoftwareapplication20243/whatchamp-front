@@ -26,30 +26,30 @@ function MainPage() {
       line: lines[line_index]
     });
 
-    // const response = await fetch(
-    //   "http://3.35.3.104:3000/api/starter", 
-    //   {
-    //     method: "POST",
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({username: username, tag: tag})
-    //   }
-    // );
-    // const data = await response.json();
+    const response = await fetch(
+      "http://3.35.3.104:3000/api/starter", 
+      {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({username: username, tag: tag})
+      }
+    );
+    const data = await response.json();
 
-    // console.log(data);
+    console.log(data);
 
-    // if (response.status === 200) {
-    //   const data = await response.json();
+    if (response.status === 200) {
+      const data = await response.json();
     
-    //   if (data["record-based"]) {
-    //     navigate('/result_page');
-    //   } else {
-    //     // Navigate to the page for a negative result
-    //     navigate('/question1');
-    //   }
-    // } else {
-    //   console.error("Request failed with status:", response.status);
-    // }
+      if (data["record-based"]) {
+        navigate('/result_page');
+      } else {
+        // Navigate to the page for a negative result
+        navigate('/question1');
+      }
+    } else {
+      console.error("Request failed with status:", response.status);
+    }
     navigate('/question1');
   };
 
