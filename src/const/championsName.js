@@ -41,613 +41,633 @@ export const championsName = {
   },
   10: {
     ko: '아우렐리온 솔',
-    en: 'Aurelion Sol'
+    en: 'AurelionSol'
   },
   11: {
+    ko: '오로라',
+    en: 'Aurora'
+  },
+  12: {
     ko: '아지르',
     en: 'Azir'
   },
-  12: {
+  13: {
     ko: '바드',
     en: 'Bard'
   },
-  13: {
+  14: {
     ko: '벨베스',
     en: 'Belveth'
   },
-  14: {
+  15: {
     ko: '블리츠크랭크',
     en: 'Blitzcrank'
   },
-  15: {
+  16: {
     ko: '브랜드',
     en: 'Brand'
   },
-  16: {
+  17: {
     ko: '브라움',
     en: 'Braum'
   },
-  17: {
+  18: {
+    ko: '브라이어',
+    en: 'Briar'
+  },
+  19: {
     ko: '케이틀린',
     en: 'Caitlyn'
   },
-  18: {
+  20: {
     ko: '카밀',
     en: 'Camille'
   },
-  19: {
+  21: {
     ko: '카시오페아',
     en: 'Cassiopeia'
   },
-  20: {
+  22: {
     ko: '초가스',
     en: 'Chogath'
   },
-  21: {
+  23: {
     ko: '코르키',
     en: 'Corki'
   },
-  22: {
+  24: {
     ko: '다리우스',
     en: 'Darius'
   },
-  23: {
+  25: {
     ko: '다이애나',
     en: 'Diana'
   },
-  24: {
+  26: {
     ko: '드레이븐',
     en: 'Draven'
   },
-  25: {
+  27: {
     ko: '문도 박사',
-    en: 'Dr. Mundo'
+    en: 'DrMundo'
   },
-  26: {
+  28: {
     ko: '에코',
     en: 'Ekko'
   },
-  27: {
+  29: {
     ko: '엘리스',
     en: 'Elise'
   },
-  28: {
+  30: {
     ko: '이블린',
     en: 'Evelynn'
   },
-  29: {
+  31: {
     ko: '이즈리얼',
     en: 'Ezreal'
   },
-  30: {
+  32: {
     ko: '피들스틱',
     en: 'Fiddlesticks'
   },
-  31: {
+  33: {
     ko: '피오라',
     en: 'Fiora'
   },
-  32: {
+  34: {
     ko: '피즈',
     en: 'Fizz'
   },
-  33: {
+  35: {
     ko: '갈리오',
     en: 'Galio'
   },
-  34: {
+  36: {
     ko: '갱플랭크',
     en: 'Gangplank'
   },
-  35: {
+  37: {
     ko: '가렌',
     en: 'Garen'
   },
-  36: {
+  38: {
     ko: '나르',
     en: 'Gnar'
   },
-  37: {
+  39: {
     ko: '그라가스',
     en: 'Gragas'
   },
-  38: {
+  40: {
     ko: '그레이브즈',
     en: 'Graves'
   },
-  39: {
+  41: {
     ko: '그웬',
     en: 'Gwen'
   },
-  40: {
+  42: {
     ko: '헤카림',
     en: 'Hecarim'
   },
-  41: {
+  43: {
     ko: '하이머딩거',
     en: 'Heimerdinger'
   },
-  42: {
+  44: {
+    ko: '흐웨이',
+    en: 'Hwei'
+  },
+  45: {
     ko: '일라오이',
     en: 'Illaoi'
   },
-  43: {
+  46: {
     ko: '이렐리아',
     en: 'Irelia'
   },
-  44: {
+  47: {
     ko: '아이번',
     en: 'Ivern'
   },
-  45: {
+  48: {
     ko: '잔나',
     en: 'Janna'
   },
-  46: {
+  49: {
     ko: '자르반 4세',
-    en: 'Jarvan IV'
+    en: 'JarvanIV'
   },
-  47: {
+  50: {
     ko: '잭스',
     en: 'Jax'
   },
-  48: {
+  51: {
     ko: '제이스',
     en: 'Jayce'
   },
-  49: {
+  52: {
     ko: '진',
     en: 'Jhin'
   },
-  50: {
+  53: {
     ko: '징크스',
     en: 'Jinx'
   },
-  51: {
+  54: {
     ko: '카이사',
     en: 'Kaisa'
   },
-  52: {
+  55: {
     ko: '칼리스타',
     en: 'Kalista'
   },
-  53: {
+  56: {
     ko: '카르마',
     en: 'Karma'
   },
-  54: {
+  57: {
     ko: '카서스',
     en: 'Karthus'
   },
-  55: {
+  58: {
     ko: '카사딘',
     en: 'Kassadin'
   },
-  56: {
+  59: {
     ko: '카타리나',
     en: 'Katarina'
   },
-  57: {
+  60: {
     ko: '케일',
     en: 'Kayle'
   },
-  58: {
+  61: {
     ko: '케인',
     en: 'Kayn'
   },
-  59: {
+  62: {
     ko: '케넨',
     en: 'Kennen'
   },
-  60: {
+  63: {
     ko: '카직스',
     en: 'Khazix'
   },
-  61: {
+  64: {
     ko: '킨드레드',
     en: 'Kindred'
   },
-  62: {
+  65: {
     ko: '클레드',
     en: 'Kled'
   },
-  63: {
+  66: {
     ko: '코그모',
     en: 'KogMaw'
   },
-  64: {
-    ko: '크산테',
+  67: {
+    ko: '크샨테',
     en: 'KSante'
   },
-  65: {
+  68: {
     ko: '르블랑',
-    en: 'LeBlanc'
+    en: 'Leblanc'
   },
-  66: {
+  69: {
     ko: '리 신',
-    en: 'Lee Sin'
+    en: 'LeeSin'
   },
-  67: {
+  70: {
     ko: '레오나',
     en: 'Leona'
   },
-  68: {
+  71: {
     ko: '릴리아',
     en: 'Lillia'
   },
-  69: {
+  72: {
     ko: '리산드라',
     en: 'Lissandra'
   },
-  70: {
+  73: {
     ko: '루시안',
     en: 'Lucian'
   },
-  71: {
+  74: {
     ko: '룰루',
     en: 'Lulu'
   },
-  72: {
+  75: {
     ko: '럭스',
     en: 'Lux'
   },
-  73: {
+  76: {
     ko: '말파이트',
     en: 'Malphite'
   },
-  74: {
+  77: {
     ko: '말자하',
     en: 'Malzahar'
   },
-  75: {
+  78: {
     ko: '마오카이',
     en: 'Maokai'
   },
-  76: {
+  79: {
     ko: '마스터 이',
-    en: 'Master Yi'
+    en: 'MasterYi'
   },
-  77: {
+  80: {
     ko: '밀리오',
     en: 'Milio'
   },
-  78: {
+  81: {
     ko: '미스 포츈',
-    en: 'Miss Fortune'
+    en: 'MissFortune'
   },
-  79: {
+  82: {
+    ko: '오공',
+    en: 'MonkeyKing'
+  },
+  83: {
     ko: '모데카이저',
     en: 'Mordekaiser'
   },
-  80: {
+  84: {
     ko: '모르가나',
     en: 'Morgana'
   },
-  81: {
+  85: {
+    ko: '나피리',
+    en: 'Naafiri'
+  },
+  86: {
     ko: '나미',
     en: 'Nami'
   },
-  82: {
+  87: {
     ko: '나서스',
     en: 'Nasus'
   },
-  83: {
+  88: {
     ko: '노틸러스',
     en: 'Nautilus'
   },
-  84: {
+  89: {
     ko: '니코',
     en: 'Neeko'
   },
-  85: {
+  90: {
     ko: '니달리',
     en: 'Nidalee'
   },
-  86: {
+  91: {
     ko: '닐라',
     en: 'Nilah'
   },
-  87: {
+  92: {
     ko: '녹턴',
     en: 'Nocturne'
   },
-  88: {
+  93: {
     ko: '누누와 윌럼프',
-    en: 'Nunu & Willump'
+    en: 'Nunu'
   },
-  89: {
+  94: {
     ko: '올라프',
     en: 'Olaf'
   },
-  90: {
+  95: {
     ko: '오리아나',
     en: 'Orianna'
   },
-  91: {
+  96: {
     ko: '오른',
     en: 'Ornn'
   },
-  92: {
+  97: {
     ko: '판테온',
     en: 'Pantheon'
   },
-  93: {
+  98: {
     ko: '뽀삐',
     en: 'Poppy'
   },
-  94: {
+  99: {
     ko: '파이크',
     en: 'Pyke'
   },
-  95: {
+  100: {
     ko: '키아나',
     en: 'Qiyana'
   },
-  96: {
+  101: {
     ko: '퀸',
     en: 'Quinn'
   },
-  97: {
+  102: {
     ko: '라칸',
     en: 'Rakan'
   },
-  98: {
+  103: {
     ko: '람머스',
     en: 'Rammus'
   },
-  99: {
+  104: {
     ko: '렉사이',
     en: 'RekSai'
   },
-  100: {
+  105: {
     ko: '렐',
     en: 'Rell'
   },
-  101: {
+  106: {
     ko: '레나타 글라스크',
-    en: 'Renata Glasc'
+    en: 'Renata'
   },
-  102: {
+  107: {
     ko: '레넥톤',
     en: 'Renekton'
   },
-  103: {
+  108: {
     ko: '렝가',
     en: 'Rengar'
   },
-  104: {
+  109: {
     ko: '리븐',
     en: 'Riven'
   },
-  105: {
+  110: {
     ko: '럼블',
     en: 'Rumble'
   },
-  106: {
+  111: {
     ko: '라이즈',
     en: 'Ryze'
   },
-  107: {
+  112: {
     ko: '사미라',
     en: 'Samira'
   },
-  108: {
+  113: {
     ko: '세주아니',
     en: 'Sejuani'
   },
-  109: {
+  114: {
     ko: '세나',
     en: 'Senna'
   },
-  110: {
+  115: {
     ko: '세라핀',
     en: 'Seraphine'
   },
-  111: {
+  116: {
     ko: '세트',
     en: 'Sett'
   },
-  112: {
+  117: {
     ko: '샤코',
     en: 'Shaco'
   },
-  113: {
+  118: {
     ko: '쉔',
     en: 'Shen'
   },
-  114: {
+  119: {
     ko: '쉬바나',
     en: 'Shyvana'
   },
-  115: {
+  120: {
     ko: '신지드',
     en: 'Singed'
   },
-  116: {
+  121: {
     ko: '사이온',
     en: 'Sion'
   },
-  117: {
+  122: {
     ko: '시비르',
     en: 'Sivir'
   },
-  118: {
+  123: {
     ko: '스카너',
     en: 'Skarner'
   },
-  119: {
+  124: {
+    ko: '스몰더',
+    en: 'Smolder'
+  },
+  125: {
     ko: '소나',
     en: 'Sona'
   },
-  120: {
+  126: {
     ko: '소라카',
     en: 'Soraka'
   },
-  121: {
+  127: {
     ko: '스웨인',
     en: 'Swain'
   },
-  122: {
+  128: {
     ko: '사일러스',
     en: 'Sylas'
   },
-  123: {
+  129: {
     ko: '신드라',
     en: 'Syndra'
   },
-  124: {
+  130: {
     ko: '탐 켄치',
-    en: 'Tahm Kench'
+    en: 'TahmKench'
   },
-  125: {
+  131: {
     ko: '탈리야',
     en: 'Taliyah'
   },
-  126: {
+  132: {
     ko: '탈론',
     en: 'Talon'
   },
-  127: {
+  133: {
     ko: '타릭',
     en: 'Taric'
   },
-  128: {
+  134: {
     ko: '티모',
     en: 'Teemo'
   },
-  129: {
+  135: {
     ko: '쓰레쉬',
     en: 'Thresh'
   },
-  130: {
+  136: {
     ko: '트리스타나',
     en: 'Tristana'
   },
-  131: {
+  137: {
     ko: '트런들',
     en: 'Trundle'
   },
-  132: {
+  138: {
     ko: '트린다미어',
     en: 'Tryndamere'
   },
-  133: {
+  139: {
     ko: '트위스티드 페이트',
-    en: 'Twisted Fate'
+    en: 'TwistedFate'
   },
-  134: {
+  140: {
     ko: '트위치',
     en: 'Twitch'
   },
-  135: {
+  141: {
     ko: '우디르',
     en: 'Udyr'
   },
-  136: {
+  142: {
     ko: '우르곳',
     en: 'Urgot'
   },
-  137: {
+  143: {
     ko: '바루스',
     en: 'Varus'
   },
-  138: {
+  144: {
     ko: '베인',
     en: 'Vayne'
   },
-  139: {
+  145: {
     ko: '베이가',
     en: 'Veigar'
   },
-  140: {
+  146: {
     ko: '벨코즈',
     en: 'Velkoz'
   },
-  141: {
+  147: {
     ko: '벡스',
     en: 'Vex'
   },
-  142: {
+  148: {
     ko: '바이',
     en: 'Vi'
   },
-  143: {
+  149: {
     ko: '비에고',
     en: 'Viego'
   },
-  144: {
+  150: {
     ko: '빅토르',
     en: 'Viktor'
   },
-  145: {
+  151: {
     ko: '블라디미르',
     en: 'Vladimir'
   },
-  146: {
+  152: {
     ko: '볼리베어',
     en: 'Volibear'
   },
-  147: {
+  153: {
     ko: '워윅',
     en: 'Warwick'
   },
-  148: {
-    ko: '오공',
-    en: 'Wukong'
-  },
-  149: {
+  154: {
     ko: '자야',
     en: 'Xayah'
   },
-  150: {
+  155: {
     ko: '제라스',
     en: 'Xerath'
   },
-  151: {
+  156: {
     ko: '신 짜오',
-    en: 'Xin Zhao'
+    en: 'XinZhao'
   },
-  152: {
+  157: {
     ko: '야스오',
     en: 'Yasuo'
   },
-  153: {
+  158: {
     ko: '요네',
     en: 'Yone'
   },
-  154: {
+  159: {
     ko: '요릭',
     en: 'Yorick'
   },
-  155: {
+  160: {
     ko: '유미',
     en: 'Yuumi'
   },
-  156: {
+  161: {
     ko: '자크',
     en: 'Zac'
   },
-  157: {
+  162: {
     ko: '제드',
     en: 'Zed'
   },
-  158: {
+  163: {
     ko: '제리',
     en: 'Zeri'
   },
-  159: {
+  164: {
     ko: '직스',
     en: 'Ziggs'
   },
-  160: {
+  165: {
     ko: '질리언',
     en: 'Zilean'
   },
-  161: {
+  166: {
     ko: '조이',
     en: 'Zoe'
   },
-  162: {
+  167: {
     ko: '자이라',
     en: 'Zyra'
   }
