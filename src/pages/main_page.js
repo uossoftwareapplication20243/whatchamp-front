@@ -30,6 +30,7 @@ function MainPage() {
     //   "http://3.35.3.104:3000/api/starter", 
     //   {
     //     method: "POST",
+    //     headers: { 'Content-Type': 'application/json' },
     //     body: JSON.stringify({username: username, tag: tag})
     //   }
     // );

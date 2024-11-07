@@ -23,7 +23,7 @@ function ResultPage() {
       try {
         const response = await fetch(
           `http://3.35.3.104:3000/api/result/${username}${tag}?line=${line}`,
-          { method: 'GET' }
+          { method: 'GET', headers: { 'Content-Type': 'application/json' } }
         );
 
         if (response.status === 200) {

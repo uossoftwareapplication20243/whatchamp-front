@@ -26,6 +26,7 @@ const QuestionPage8 = () => {
     // const response = await fetch(
     //   `http://3.35.3.104:3000/api/answers/${username}${tag}`, {
     //     method: "POST",
+//          headers: { 'Content-Type': 'application/json' },
     //     body: JSON.stringify(questionMap)
     //   }
     // );
