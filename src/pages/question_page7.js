@@ -19,6 +19,7 @@ const QuestionPage7 = () => {
       ...questionMap,
       q7: option,
     });
+    console.log("q7저장완");
     console.log(questionMap);
     navigate('/question8');
   };

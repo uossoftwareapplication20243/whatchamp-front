@@ -7,7 +7,7 @@ import { useQuestionContext } from '../context/questionContext.js';
 function MainPage() {
   const [showLineSelection, setShowLineSelection] = useState(false);
   const navigate = useNavigate();
-  const { setLine, username, tag, setUsername, setTag } = useQuestionContext();
+  const { setQuestionMap, questionMap, setLine, username, tag, setUsername, setTag } = useQuestionContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +21,10 @@ function MainPage() {
 
   const handleLineSelection = async (line_index) => {
     setLine(line_index);
+    setQuestionMap({
+      ...questionMap,
+      line: lines[line_index]
+    });
 
     // const response = await fetch(
     //   "http://3.35.3.104:3000/api/starter", 
