@@ -18,7 +18,6 @@ const QuestionPage3 = () => {
       ...questionMap,
       q3: option,
     });
-    console.log(questionMap);
     navigate('/question4');
   };
 

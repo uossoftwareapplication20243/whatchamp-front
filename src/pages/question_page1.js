@@ -8,10 +8,6 @@ const QuestionPage1 = () => {
   const navigate = useNavigate();
   const {questionMap, setQuestionMap, line} = useQuestionContext()
 
-  console.log(questionMap)
-  console.log(line)
-
-
   const jobs = [
     '전사', '마법사', '암살자',
     '원거리 딜러', '탱커', '서포터'
@@ -24,8 +20,6 @@ const QuestionPage1 = () => {
   };
 
   const handleNext = () => {
-    console.log('Selected jobs:', selectedJobs);
-
     setQuestionMap({
       ...questionMap,
       q1: selectedJobs,
