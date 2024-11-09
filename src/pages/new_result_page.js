@@ -26,7 +26,7 @@ function NewResultPage() {
     async function fetchChampionData() {
       try {
         const response = await fetch(
-          `http://3.35.3.104:3000/api/new/result/${username}${tag}`,
+          `http://3.35.3.104:3000/api/new/result`,
           { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(questionMap) }
         );
 
