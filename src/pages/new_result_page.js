@@ -14,7 +14,7 @@ function get_images(champion_en){
 
 function NewResultPage() {
   const location = useLocation();
-  const {line, username, tag } = useQuestionContext();
+  const { questionMap, line, username, tag } = useQuestionContext();
   const [championList, setChampionList] = useState([]);
   const idx = line;
   useEffect(() => {
