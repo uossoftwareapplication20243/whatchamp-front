@@ -42,7 +42,7 @@ function MainPage() {
       const data = await response.json();
     
       if (data["record-based"]) {
-        navigate('/result_page');
+        navigate('/result');
       } else {
         // Navigate to the page for a negative result
         navigate('/question1');
