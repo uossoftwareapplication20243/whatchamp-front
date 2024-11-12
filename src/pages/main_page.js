@@ -26,9 +26,8 @@ function MainPage() {
       line: lines[line_index]
     });
   
-    console.log("서버로 통신");
-  
     try {
+      console.log("서버로 통신");
       const response = await fetch(
         server_url + "/api/starter",
         {
