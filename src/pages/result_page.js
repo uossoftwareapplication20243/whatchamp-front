@@ -6,6 +6,7 @@ import { cNameMap } from '../const/championsName';
 import { positions } from '../const/positions';
 import { Link } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext';
+import { server_url } from '../const/url';
 
 function get_images(champion_en) {
   return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion_en}_0.jpg`;
@@ -22,7 +23,7 @@ function ResultPage() {
     async function fetchChampionData() {
       try {
         const response = await fetch(
-          `http://3.35.3.104:3000/api/result/${username}${tag}?line=${line}`,
+          server_url + `/api/result/${username}${tag}?line=${line}`,
           { method: 'GET', headers: { 'Content-Type': 'application/json' } }
         );
 
