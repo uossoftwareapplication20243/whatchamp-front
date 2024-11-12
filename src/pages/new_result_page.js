@@ -6,6 +6,7 @@ import { cNameMap } from '../const/championsName';
 import {positions} from '../const/positions';
 import { Link } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext';
+import { server_url } from '../const/url';
 
 
 function get_images(champion_en){
@@ -19,21 +20,26 @@ function NewResultPage() {
   const idx = line;
   useEffect(() => {
     // Initial static data for demonstration
-    setChampionList(['카직스', '크산테', '코그모']);
+    setChampionList([]);
   }, []);
 
   useEffect(() => {
     async function fetchChampionData() {
       try {
+        console.log("Content-based 결과 서버에 요청");
         const response = await fetch(
-          `http://3.35.3.104:3000/api/new/result`,
+          server_url + `/api/new/result`,
           { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(questionMap) }
         );
 
         if (response.status === 200) {
+          console.log("Content-based 결과 데이터 반환성공");
+          console.log(response.body);
           const data = await response.json();
+          console.log(data);
           setChampionList(data.champions); 
         } else {
+          console.log("Content-based 결과 데이터 반환실패");
           console.error('Request failed with status:', response.status);
         }
       } catch (error) {

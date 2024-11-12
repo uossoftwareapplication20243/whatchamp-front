@@ -6,6 +6,7 @@ import { cNameMap } from '../const/championsName';
 import { positions } from '../const/positions';
 import { Link } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext';
+import { server_url } from '../const/url';
 
 function get_images(champion_en) {
   return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion_en}_0.jpg`;
@@ -21,13 +22,17 @@ function ResultPage() {
   useEffect(() => {
     async function fetchChampionData() {
       try {
+        console.log("CF 결과 서버에 요청");
         const response = await fetch(
-          `http://3.35.3.104:3000/api/result/${username}${tag}?line=${line}`,
+          server_url + `/api/result/${username}${tag}?line=${line}`,
           { method: 'GET', headers: { 'Content-Type': 'application/json' } }
         );
 
         if (response.status === 200) {
+          console.log("Content-based 결과 데이터 반환성공");
+          console.log(response.body);
           const data = await response.json();
+          console.log(data);
           setChampionList(data.champions); 
         } else {
           console.error('Request failed with status:', response.status);
