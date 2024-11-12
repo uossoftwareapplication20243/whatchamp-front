@@ -34,15 +34,15 @@ function MainPage() {
         body: JSON.stringify({username: username, tag: tag})
       }
     );
-    const data = await response.json();
+    // const data = await response.json();
 
-    console.log(data);
+    // console.log(data);
 
     if (response.status === 200) {
       const data = await response.json();
     
       if (data["record-based"]) {
-        navigate('/result_page');
+        navigate('/result');
       } else {
         // Navigate to the page for a negative result
         navigate('/question1');
