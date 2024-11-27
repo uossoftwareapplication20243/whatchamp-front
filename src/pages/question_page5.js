@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Button, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext';
+import { active_color, inactive_color } from '../const/color';
 
 const QuestionPage5 = () => {
   const navigate = useNavigate();
@@ -43,9 +44,9 @@ const QuestionPage5 = () => {
               m: 1,
               width: '200px',
               height: '100px',
-              backgroundColor: 'rgba(68, 77, 242, 0.5)', // 60% opacity
+              backgroundColor: inactive_color, // 60% opacity
               '&:hover': {
-                backgroundColor: 'rgba(68, 77, 242, 1)', // 100% opacity
+                backgroundColor: active_color, // 100% opacity
               },
             }}
           >

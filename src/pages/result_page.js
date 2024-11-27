@@ -60,7 +60,7 @@ function ResultPage() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: loading ? 'center' : 'flex-start',
-        minHeight: '80vh', // To ensure proper alignment for the spinner
+        minHeight: '80vh',
       }}
     >
       {loading ? (

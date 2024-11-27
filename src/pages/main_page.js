@@ -4,6 +4,7 @@ import { Box, Typography, TextField, Button, Grid } from '@mui/material';
 import QuestionProvider from '../context/questionContext';
 import { useQuestionContext } from '../context/questionContext.js';
 import { server_url } from '../const/url.js';
+import { active_color, inactive_color } from '../const/color.js';
 
 function MainPage() {
   const [showLineSelection, setShowLineSelection] = useState(false);
@@ -109,9 +110,9 @@ function MainPage() {
                     onClick={() => handleLineSelection(index)}
                     sx={{
                       height: 100,
-                      backgroundColor: 'rgba(68, 77, 242, 0.5)',
+                      backgroundColor: inactive_color,
                       '&:hover': {
-                        backgroundColor: 'rgba(68, 77, 242, 1)',
+                        backgroundColor: active_color,
                       }
                     }}
                   >

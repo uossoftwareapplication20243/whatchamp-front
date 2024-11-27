@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Typography, Button, Box, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useQuestionContext } from '../context/questionContext';
+import { active_color, inactive_color } from '../const/color';
 
 const QuestionPage8 = () => {
   const navigate = useNavigate();
@@ -69,9 +70,9 @@ const QuestionPage8 = () => {
               onClick={() => handleButtonClick(option)}
               sx={{
                 height: 100,
-                backgroundColor: 'rgba(68, 77, 242, 0.5)',
+                backgroundColor: inactive_color,
                 '&:hover': {
-                  backgroundColor: 'rgba(68, 77, 242, 1)',
+                  backgroundColor: active_color,
                 }
               }}
             >
