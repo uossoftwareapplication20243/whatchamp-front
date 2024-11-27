@@ -1,12 +1,11 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { active_color, inactive_color } from '../../const/color';
+import { questionList } from '../../const/question_list';
 
 const AnswerSelector = ({
-  title,
-  options,
-  handleButtonClick,
-  idx
+  idx,
+  handleButtonClick
 }) => {
   return (
     <Box
@@ -18,10 +17,10 @@ const AnswerSelector = ({
       sx={{ backgroundColor: '#f5f5f5' }}
     >
       <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
-        {title}
+        {questionList[idx].title}
       </Typography>
       <Box mb={4} mt={4}>
-        {options.map((option, index) => (
+        {questionList[idx].option.map((option, index) => (
           <Button
             key={index}
             variant="contained"
@@ -46,7 +45,7 @@ const AnswerSelector = ({
         ))}
       </Box>
       <Typography variant="body1" sx={{ opacity: 0.7 }}>
-        {idx}/8
+        {questionList[idx].idx}/8
       </Typography>
     </Box>
   );

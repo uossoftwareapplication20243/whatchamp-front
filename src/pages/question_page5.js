@@ -6,12 +6,7 @@ import AnswerSelector from '../components/selector/answer_selector';
 const QuestionPage5 = () => {
   const navigate = useNavigate();
   const { questionMap, setQuestionMap } = useQuestionContext();
-
-  const intro = "어떤 챔피언을 하고 싶나요?"
-  const options = [
-    "많이 쓰는\n챔피언",
-    "유니크한\n챔피언"
-  ];
+  const pageIdx = 4;
 
   const handleButtonClick = (option) => {
     setQuestionMap({
@@ -23,10 +18,8 @@ const QuestionPage5 = () => {
 
   return (
     <AnswerSelector
-      title={intro}
-      options={options}
+      idx={pageIdx}
       handleButtonClick={handleButtonClick}
-      idx={5}
     />
   );
 };

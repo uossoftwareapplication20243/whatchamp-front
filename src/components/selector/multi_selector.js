@@ -1,14 +1,13 @@
 import React from 'react';
 import { Box, Typography, Button, Grid} from '@mui/material';
 import { active_color, inactive_color } from '../../const/color';
+import { questionList } from '../../const/question_list';
 
 const MultiSelector = ({
-  title,
-  options,
+  idx,
   handleNext,
   handleJobToggle,
   selectedJobs,
-  idx
 }) => {
   return (
     <Box
@@ -20,10 +19,10 @@ const MultiSelector = ({
       sx={{ backgroundColor: '#f5f5f5', p: 3 }}
     >
       <Typography variant="h4" mb={4} gutterBottom sx={{ fontWeight: 'bold' }}>
-        {title}
+        {questionList[idx].title}
       </Typography>
       <Grid container spacing={2} sx={{ maxWidth: 600, mb: 4 }}>
-        {options.map((option, index) => (
+        {questionList[idx].option.map((option, index) => (
           <Grid item xs={4} key={index}>
             <Button
               variant="contained"
@@ -61,7 +60,7 @@ const MultiSelector = ({
         다음
       </Button>
       <Typography variant="body1" sx={{ mt: 2, opacity: 0.7 }}>
-        {idx}/8
+        {questionList[idx].idx}/8
       </Typography>
     </Box>
   );

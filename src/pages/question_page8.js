@@ -6,13 +6,7 @@ import MultiOptionsSelector from '../components/selector/multi_options_selector'
 const QuestionPage8 = () => {
   const navigate = useNavigate();
   const { questionMap, setQuestionMap, username, tag } = useQuestionContext();
-  const intro = "나의 조별과제 스타일은?";
-  const options = [
-    "무조건 리더",
-    "답답하면 리더",
-    "그냥.. 열심히 해요",
-    "버스타고 싶은데요? ㅎㅎ"
-  ];
+  const pageIdx = 7;
 
   const handleButtonClick = (option) => {
     // Update questionMap with the answer for q8
@@ -50,10 +44,8 @@ const QuestionPage8 = () => {
 
   return (
     <MultiOptionsSelector
-      title={intro}
-      options={options}
+      idx = {pageIdx}
       handleButtonClick={handleButtonClick}
-      idx={8}
     />
   );
 };
