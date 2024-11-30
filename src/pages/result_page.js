@@ -33,7 +33,7 @@ function ResultPage() {
           console.log("Content-based 결과 데이터 반환성공");
           const data = await response.json();
           console.log(data);
-          setChampionList(data.champions);
+          setChampionList(data); 
         } else {
           console.error('Request failed with status:', response.status);
         }

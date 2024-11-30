@@ -25,36 +25,21 @@ function NewResultPage() {
   }, []);
 
   useEffect(() => {
-    async function fetchChampionData() {
-      try {
-        setLoading(true); // Start loading
-        console.log("Content-based 결과 서버에 요청");
-        const response = await fetch(
-          server_url + `/api/new/result`,
-          { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(questionMap) }
-        );
 
-        if (response.status === 200) {
-          console.log("Content-based 결과 데이터 반환성공");
-          const data = await response.json();
+    if (questionMap.q8) {
+      const sendData = async () => {
+        try {
+          const data = await sendQuestionMap(questionMap, username, tag);
           console.log(data);
-          setChampionList(data.champions);
-        } else {
-          console.log("Content-based 결과 데이터 반환실패");
-          console.error('Request failed with status:', response.status);
+          navigate('/new_result');
+        } catch (error) {
+          console.error('Error sending data:', error);
         }
-      } catch (error) {
-        console.error('Error fetching champions:', error);
-      } finally {
-        setLoading(false); // Stop loading
-      }
-    }
+      };
 
-    if (username && tag) {
-      fetchChampionData();
-      setLoading = false;
+      sendData();
     }
-  }, [username, tag, line, questionMap]);
+  }, [questionMap, username, tag, navigate]);
 
   return (
     <Box
